@@ -76,3 +76,20 @@ const live = inventors.sort(function(firstPerson, secondPerson){
     }
 });
 console.table(live);
+
+
+// ---------------------------ZADANIE SZÓSTE------------------------------
+// Pobranie danych z listy na stronie, dodanie ich do listy i wyświetlenie 
+// .sort()
+//--------------------------------------------------------------------------
+
+const category = document.querySelector('.mw-category'); //wybranie kategorii (sprawdzenie inspektorem)
+const links = Array.from(category.querySelectorAll('a')); //stworzenie tablicy z wszystkich elementów "a"
+const de = links
+                .map(link => link.textContent); //wyselekcjonowane wszystkich tekstowych
+                .filter(streetName => streetName.includes('de')); //wybór tylko ulic ze słowem "de"
+
+// ---------------------------ZADANIE SIÓDME------------------------------
+// Wybranie ludzi alfabetycznie po nazwisku
+// .sort()
+//--------------------------------------------------------------------------
