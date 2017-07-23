@@ -81,15 +81,25 @@ console.table(live);
 // ---------------------------ZADANIE SZÓSTE------------------------------
 // Pobranie danych z listy na stronie, dodanie ich do listy i wyświetlenie 
 // .sort()
+// przykład do konkretnego adresu strony (wikipedia)
 //--------------------------------------------------------------------------
 
-const category = document.querySelector('.mw-category'); //wybranie kategorii (sprawdzenie inspektorem)
-const links = Array.from(category.querySelectorAll('a')); //stworzenie tablicy z wszystkich elementów "a"
-const de = links
-                .map(link => link.textContent); //wyselekcjonowane wszystkich tekstowych
-                .filter(streetName => streetName.includes('de')); //wybór tylko ulic ze słowem "de"
+//const category = document.querySelector('.mw-category'); //wybranie kategorii (sprawdzenie inspektorem)
+//const links = Array.from(category.querySelectorAll('a')); //stworzenie tablicy z wszystkich elementów "a"
+//const de = links
+//                .map(link => link.textContent) //wyselekcjonowane wszystkich tekstowych
+//.filter(streetName => streetName.includes('de')); //wybór tylko ulic ze słowem "de"
 
 // ---------------------------ZADANIE SIÓDME------------------------------
-// Wybranie ludzi alfabetycznie po nazwisku
-// .sort()
+//  zsumowanie
+//  .reduce()
 //--------------------------------------------------------------------------
+
+const transportation = data.reduce(function(obj, item){
+    if(!obj[item]){ //jeśli nie ma takiego objektu to nadaj mu zero
+        obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+},{});
+console.log(transportation);
